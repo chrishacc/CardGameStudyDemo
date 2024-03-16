@@ -83,10 +83,17 @@ public class CardSelectionHasArrow : CardSelectionBase
 
         if(hitInfo.collider != null)
         {
-            //如果玩家点击了卡牌，就选中这张卡牌
-            selectedCard = hitInfo.collider.gameObject;
-            selectedCard.GetComponent<SortingGroup>().sortingOrder += 10;
-            previousClickPosition = mousePosition;
+            var card = hitInfo.collider.GetComponent<CardObject>();
+            var cardTemplate = card.template;
+
+            if (CardUtils.CardHasTargetableEffect(cardTemplate))
+            {
+                //如果玩家点击了卡牌，就选中这张卡牌
+                selectedCard = hitInfo.collider.gameObject;
+                selectedCard.GetComponent<SortingGroup>().sortingOrder += 10;
+                previousClickPosition = mousePosition;
+            }
+   
         }
     }
 

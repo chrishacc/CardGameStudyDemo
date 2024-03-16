@@ -24,7 +24,27 @@ public class CardObject : MonoBehaviour
     private int _savedSortingOrder;
 
     private SortingGroup _sortingGroup;
+
+    public enum CardState
+    {
+        InHand,//手握牌状态
+        AboutToBePlayed//待出牌状态
+    }
+
+    private CardState _currentState;
+    public CardState State => _currentState;//定义了一个只读属性 State，它返回 _currentState 的值，这种写法称为 expression-bodied member，可以简洁地定义只有一行的成员方法或属性。
+
+    private void OnEnable()
+    {
+        SetState(CardState.InHand);
     
+    }
+
+    public void SetState(CardState state)
+    {
+        _currentState = state;
+    }
+
 
     private void Awake()
     {

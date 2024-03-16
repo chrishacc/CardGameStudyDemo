@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Skeletno
   Prefab: {fileID: 8288431692075836191, guid: a3088aa92a6fbd148a935431f6212edf, type: 3}
+  Patterns:
+  - {fileID: 11400000, guid: fcb251531b1e2a04e91f04b23f309ae5, type: 2}
+  - {fileID: 11400000, guid: e6b86c01a062c4542a8e331bb0a49d78, type: 2}

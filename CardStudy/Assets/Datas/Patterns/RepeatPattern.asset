@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba31ce94a141a8e4483a1c75e4f91a2e, type: 3}
-  m_Name: CardTest3
+  m_Script: {fileID: 11500000, guid: 767030ad5aef1774ab0edc9e7bbdf73d, type: 3}
+  m_Name: RepeatPattern
   m_EditorClassIdentifier: 
-  id: 3
-  cardName: TestName3
-  cost: 0
-  type: {fileID: 11400000, guid: 397903fa3c6b56a4d80c6c74e460ffb3, type: 2}
-  picture: {fileID: 0}
-  Effects: []
+  Effects:
+  - {fileID: 11400000, guid: 931c03c6e83aa034c81c9d270d5e49c7, type: 2}
+  Times: 1
